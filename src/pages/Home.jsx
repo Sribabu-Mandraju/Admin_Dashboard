@@ -8,6 +8,8 @@ import { RiLightbulbFlashFill } from 'react-icons/ri';
 import { BiLogoMicrosoftTeams } from 'react-icons/bi';
 import { GrTemplate } from 'react-icons/gr';
 import { BsFillLockFill } from 'react-icons/bs';
+import { FaUnlockAlt } from "react-icons/fa";
+
 import { FiSearch } from "react-icons/fi";
 
 const topBarTabs = [
@@ -47,7 +49,7 @@ const Home = ({ children }) => {
       <div className="w-full fixed top-0 flex items-center justify-between h-[60px] z-[2] shadow bg-white">
         <div className="flex items-center">
           <HiOutlineViewList className="text-2xl mx-3 block md:hidden" onClick={() => setShow(!show)} />
-          <div className="logo font-semibold px-3 text-2xl">QikTRACK</div>
+          <Link to ="/" className="logo select-none font-semibold px-3 logo text-2xl">The <span className="text-red-500 logo">Trio</span> </Link>
           <div className="flex items-center relative">
             <FiSearch className="absolute left-[10px] hidden md:block z-[2] pointer-events-none" />
             <input type="text" className="hidden md:block rounded-full ps-[30px] bg-[transparent] h-[30px] border" placeholder='search...' />
@@ -65,13 +67,13 @@ const Home = ({ children }) => {
             </Link>
           ))}
           <div className="tab font-semibold mx-[20px] px-4 py-1 rounded-md flex items-center bg-[black] text-white">
-            <span className="pe-2"><BsFillLockFill /></span>
+            <span className="pe-2"><FaUnlockAlt /></span>
             <span>Login</span>
           </div>
         </div>
       </div>
 
-      <div className={`sidebar shadow overflow-y-scroll fixed md:hidden w-[100%] z-[3] lg:z-[-1] top-0 ${show ? 'left-[-100%] ms-[-100%]' : 'left-[0%] ms-[0%]'} duration-500 h-screen max-h-[100vh] bg-[white] flex justify-start items-center flex-col`}>
+      <div className={`sidebar shadow overflow-y-scroll fixed md:hidden w-[100%] z-[3] lg:z-[-1] top-0 ${show ? 'left-[-100%] ms-[-100%]' : 'left-[0%] ms-[0%]'} duration-500 h-screen max-h-[100vh] bg-[white] flex justify-start  flex-col`}>
         <div className="w-full flex items-center flex-row-reverse justify-start md:hidden">
           <button onClick={() => setShow(!show)}>
             <VscChromeClose className="text-[30px]" />
@@ -90,7 +92,7 @@ const Home = ({ children }) => {
       <div className="w-full flex flex-start h-[calc(100vh-60px)] mt-[60px] overflow-y-hidden">
         <div className="hidden md:flex flex-col w-[240px] border h-screen mb-[40px] top-[50px] overflow-y-scroll">
           {topBarTabs.map((item, index) => (
-            <Link to={`/${item.path}`}  key={index} className={`tab-heading ms-1 w-[90%] mx-auto rounded-md hover:bg-[#99c2ff] font-semibold ps-3 text-[20px] mt-[10px] flex items-center ${path === item.path ? 'bg-blue-200 text-blue-600' : ''}`}>
+            <Link to={`/${item.path}`}  key={index} className={`tab-heading  ms-1 w-[90%] mx-auto rounded-md hover:bg-[#99c2ff] font-semibold ps-3 text-[20px] mt-[10px] flex items-center ${path === item.path ? 'bg-blue-200 text-blue-600' : 'text-zinc-500'}`}>
               <item.icon className="me-2" />
               <span>{item.label}</span>
             </Link >

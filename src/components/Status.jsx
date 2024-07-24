@@ -6,8 +6,8 @@ const Status = () => {
   return (
     <>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-[97%] mx-auto mt-[40px]">
-          <div className=" border col-span-2 bg-[#cce6ff] rounded-md relative flex flex-col shadow-lg">
-              <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full shadow-lg flex items-center">
+          <div className=" border shadow-md col-span-2 bg-[#cce6ff] rounded-md relative flex flex-col ">
+              <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full  flex items-center">
                 <FaCalendarDay className="mx-2" />
                 <span className="mx-1 font-bold text-blue-400">20/12/2023</span>
               </div>
@@ -34,8 +34,8 @@ const Status = () => {
                 </div>
               </div>
           </div>
-          <div className="  border flex flex-col relative shadow-lg mt-[40px] md:mt-[0px] rounded-md">
-              <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full shadow-lg flex items-center">
+          <div className="  border shadow-md flex flex-col relative  mt-[40px] md:mt-[0px] rounded-md">
+              <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full  flex items-center">
                 <FaCalendarDay className="mx-2" />
                 <span className="mx-1 font-bold text-blue-400">20/12/2023</span>
               </div>
@@ -49,19 +49,19 @@ const Status = () => {
                   60
               </div>
               <div className="w-full flex items-center justify-around">
-                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap shadow-lg rounded-md border my-3">
+                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-green-500 font-bold">Present</div>
                   <div className="ps-3 font-bold">12</div>
                 </div>
                 
-                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap shadow-lg rounded-md border my-3">
+                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-red-500 font-bold">Absent</div>
                   <div className="ps-3 font-bold">12</div>
                 </div>
               </div>
           </div>
-          <div className="  border flex flex-col mt-[40px] md:mt-[0px] relative shadow-lg ">
-            <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full shadow-lg flex items-center">
+          <div className="shadow-md  border flex flex-col mt-[40px] md:mt-[0px] relative  ">
+            <div className="absolute right-0 top-[-40px] w-[130px] h-[30px] rounded-full  flex items-center">
               <FaCalendarDay className="mx-2" />
               <span className="mx-1 font-bold text-blue-400">20/12/2023</span>
             </div>
@@ -75,7 +75,7 @@ const Status = () => {
                   60
               </div>
               <div className="w-full flex items-center justify-around">
-                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap shadow-lg rounded-md border my-3">
+                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-green-500 font-bold">Route</div>
                   <div className="ps-3 font-bold">12</div>
                 </div>
