@@ -7,3 +7,8 @@
 .primary{
     color:#00264d;
 }
+
+::-webkit-scrollbar {
+    width: 0px; /* Width of the vertical scrollbar */
+    /* height: 8px; */
+  }

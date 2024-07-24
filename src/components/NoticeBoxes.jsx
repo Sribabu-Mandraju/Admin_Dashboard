@@ -1,7 +1,9 @@
 import React from 'react';
 
 const NoticeBox = ({ title, description, buttonText ,bg}) => (
-    <div className={`w-[97%] max-w-[350px] border rounded-md shadow-lg flex flex-col ps-3 my-2 ${bg-[bg]}`}>
+    <div className={`w-[97%] max-w-[350px] border rounded-md shadow-lg flex flex-col ps-3 my-2 `} style={{
+        backgroundColor:bg
+    }}>
         <div className="font-bold pt-5">{title}</div>
         <div className="text-zinc-600">{description}</div>
         <div className="w-full flex flex-row-reverse mx-2 items-center">
