@@ -4,6 +4,7 @@ import { FaCalendarDay } from "react-icons/fa";
 import Status from '../components/Status';
 import NoticeBoxes from '../components/NoticeBoxes';
 import Alert from '../components/Alert';
+
 const Dashboard = () => {
   const alertsData = [
     { message: 'Alert message 1' },
