@@ -98,7 +98,7 @@ const Home = ({ children }) => {
             </Link >
           ))}
         </div>
-        <div className="w-full h-screen overflow-y-scroll">{children}</div>
+        <div className="w-[97%] mx-auto h-screen overflow-y-scroll">{children}</div>
       </div>
     </>
   );

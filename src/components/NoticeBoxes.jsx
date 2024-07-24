@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NoticeBox = ({ title, description, buttonText ,bg}) => (
-    <div className={`w-[97%] max-w-[350px] border rounded-md shadow-lg flex flex-col ps-3 my-2 `} style={{
+    <div className={`w-[100%] max-w-[350px] mx-auto border rounded-md shadow-lg flex flex-col ps-3 my-2 `} style={{
         backgroundColor:bg
     }}>
         <div className="font-bold pt-5">{title}</div>
@@ -42,7 +42,7 @@ const NoticeBoxes = () => {
     ];
     
     return (
-        <div className="flex w-[97%] mx-auto items-center justify-evenely gap-3 flex-wrap">
+        <div className="flex w-[99%] mx-auto items-center justify-evenely gap-3 flex-wrap">
             {noticeBoxes.map((box, index) => (
                 <NoticeBox
                     key={index}
