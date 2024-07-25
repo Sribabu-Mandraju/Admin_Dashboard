@@ -13,15 +13,15 @@ import { FaUnlockAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
 const topBarTabs = [
-  { label: 'Realtime', path: '',icon: IoMdHome  },
-  { label: 'Dashboard', path: 'dashboard',icon: RiLightbulbFlashFill },
+  { label: 'Dashboard', path: '',icon: RiLightbulbFlashFill },
+  { label: 'Realtime', path: 'main',icon: IoMdHome  },
   { label: 'Report', path: 'report' ,icon: BiLogoMicrosoftTeams },
   { label: 'Alerts', path: 'alerts' ,icon: GrTemplate},
 ];
 
 const sidebarItems = [
-  { label: 'Realtime', icon: IoMdHome },
   { label: 'Dashboard', icon: RiLightbulbFlashFill },
+  { label: 'Realtime', icon: IoMdHome },
   { label: 'Report', icon: BiLogoMicrosoftTeams },
   { label: 'Alerts', icon: GrTemplate },
 ];
@@ -50,9 +50,9 @@ const Home = ({ children }) => {
         <div className="flex items-center">
           <HiOutlineViewList className="text-2xl mx-3 block md:hidden" onClick={() => setShow(!show)} />
           <Link to ="/" className="logo select-none font-semibold px-3 logo text-2xl">The <span className="text-red-500 logo">Trio</span> </Link>
-          <div className="flex items-center relative">
+          <div className="flex mx-4 items-center relative">
             <FiSearch className="absolute left-[10px] hidden md:block z-[2] pointer-events-none" />
-            <input type="text" className="hidden md:block rounded-full ps-[30px] bg-[transparent] h-[30px] border" placeholder='search...' />
+            <input type="text" className="shadow-md hidden md:block rounded-full ps-[30px] bg-[transparent] h-[30px] border" placeholder='search...' />
           </div>
         </div>
 
@@ -92,7 +92,7 @@ const Home = ({ children }) => {
       <div className="w-full flex flex-start h-[calc(100vh-60px)] mt-[60px] overflow-y-hidden">
         <div className="hidden md:flex flex-col w-[240px] border h-screen mb-[40px] top-[50px] overflow-y-scroll">
           {topBarTabs.map((item, index) => (
-            <Link to={`/${item.path}`}  key={index} className={`tab-heading  ms-1 w-[90%] mx-auto rounded-md hover:bg-[#99c2ff] font-semibold ps-3 text-[20px] mt-[10px] flex items-center ${path === item.path ? 'bg-blue-200 text-blue-600' : 'text-zinc-500'}`}>
+            <Link to={`/${item.path}`}  key={index} className={`tab-heading  ms-1 w-[90%] text-[18px]  hover:text-[#1fa0dd] duration-150 mx-auto rounded-full hover:bg-[#e7f8ff] font-semibold ps-3  mt-[10px] flex items-center  border-1 border-cyan-500  ${path === item.path ? 'bg-[#e7f8ff] border-[1px] active-page text-[#1fa0dd]' : 'text-zinc-500'}`}>
               <item.icon className="me-2" />
               <span>{item.label}</span>
             </Link >

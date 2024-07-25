@@ -15,9 +15,9 @@ const Dashboard = () => {
   return (
     <>
       <div className="w-full overflow-y-auto">
-        <div className="ps-2 text-2xl md:text-3xl font-semibold pt-2">Welcome , Aatreya Academy 👋 </div>
+        <div className="ps-2 text-1xl md:text-3xl pb-3 font-semibold pt-2">Welcome , Aatreya Academy 👋 </div>
         <Status />
-        <div className="ms-4 mt-4 w-[130px] h-[30px] rounded-full shadow-lg flex items-center">
+        <div className="mx-4 my-4 shadow-lg w-[140px] h-[30px] rounded-full border border-cyan-500 p-2  flex items-center ">
           <FaCalendarDay className="mx-2" />
           <span className="mx-1 font-bold text-blue-400">20/12/2023</span>
         </div>

@@ -29,7 +29,7 @@ const Alert = ({ alerts }) => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button className="px-3 py-1 bg-blue-800 rounded-md text-white font-bold">
+                <button className="px-3 py-1 bg-blue-800 rounded-md text-white font-semibold">
                   Check Now
                 </button>
                 <div

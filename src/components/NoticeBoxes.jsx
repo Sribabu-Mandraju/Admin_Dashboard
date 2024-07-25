@@ -1,13 +1,13 @@
 import React from 'react';
 
 const NoticeBox = ({ title, description, buttonText ,bg}) => (
-    <div className={`w-[100%] max-w-[350px] mx-auto border rounded-md shadow-lg flex flex-col ps-3 my-2 `} style={{
+    <div className={`w-[100%] max-w-[350px] overflow-hidden mx-auto border rounded-md shadow-lg flex flex-col ps-3 my-2 `} style={{
         backgroundColor:bg
     }}>
         <div className="font-bold pt-5">{title}</div>
         <div className="text-zinc-600">{description}</div>
-        <div className="w-full flex flex-row-reverse mx-2 items-center">
-            <button className="px-3 py-1 bg-black my-2 text-[12px] mx-5 rounded-full text-white font-bold">View All</button>
+        <div className="w-full flex flex-row-reverse  items-center">
+            <button className="px-3 py-1 bg-black my-2 me-2 text-[12px]  rounded-full text-white font-bold">View All</button>
         </div>
     </div>
 );
@@ -42,7 +42,7 @@ const NoticeBoxes = () => {
     ];
     
     return (
-        <div className="flex w-[99%] mx-auto items-center justify-evenely gap-3 flex-wrap">
+        <div className="flex w-[100%] mx-auto items-center justify-evenely  flex-wrap">
             {noticeBoxes.map((box, index) => (
                 <NoticeBox
                     key={index}
