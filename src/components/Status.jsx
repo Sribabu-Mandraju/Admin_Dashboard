@@ -55,7 +55,7 @@ const Status = () => {
                 
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap rounded-md border   my-3">
                   <div className="text-red-500 font-bold">Absent</div>
-                  <div className="ps-0 md:ps-2 font-bold secondary">22</div>
+                  <div className="ps-0 md:ps-4 font-bold secondary">22</div>
                 </div>
               </div>
           </div>
