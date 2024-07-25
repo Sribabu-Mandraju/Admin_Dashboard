@@ -53,9 +53,13 @@ const Status = () => {
                   <div className="ps-0 md:px-3 font-bold secondary">22</div>
                 </div>
                 
-                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap rounded-md border   my-3">
+                {/* <div className="w-[40%] py-1 flex items-center justify-center flex-wrap rounded-md border   my-3">
                   <div className="text-red-500  text-[12px] font-bold">Absent</div>
                   <div className="ps-0 md:ps-3  font-bold secondary">22</div>
+                </div> */}
+                <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
+                  <div className="text-green-600 font-bold">Present</div>
+                  <div className="ps-0 md:px-3 font-bold secondary">22</div>
                 </div>
               </div>
           </div>
