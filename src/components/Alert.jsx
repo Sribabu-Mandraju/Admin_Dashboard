@@ -21,7 +21,7 @@ const Alert = ({ alerts }) => {
           <div key={index} className="w-full flex-col items-center justify-center">
             <div className={`w-[97%] rounded-md mx-auto mt-3  bg-[#ccebff] ${index=== alerts.length-1 ? "mb-[100px]":""} flex items-center justify-between`}>
               <div className="flex items-center gap-3">
-                <div className="w-[40px] h-[40px] rounded-full opacity-65 mx-3 flex justify-center items-center bg-blue-200 cursor-pointer ">
+                <div className="md:w-[40px] md:h-[40px] w-[30px] h-[30px] hidden md:flex  rounded-full opacity-65 mx-2  justify-center items-center bg-blue-200 cursor-pointer ">
                   <FaEye />
                 </div>
                 <div className="p-4">
@@ -29,7 +29,7 @@ const Alert = ({ alerts }) => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button className="px-3 py-1 bg-blue-800 rounded-md text-white font-semibold">
+                <button className="px-3 py-1 text-[12px] md:text-[18px] bg-blue-800 rounded-md text-white font-semibold">
                   Check Now
                 </button>
                 <div

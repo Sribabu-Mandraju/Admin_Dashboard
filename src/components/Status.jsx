@@ -50,12 +50,12 @@ const Status = () => {
               <div className="w-full flex items-center justify-around">
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-green-600 font-bold">Present</div>
-                  <div className="ps-3 font-bold secondary">22</div>
+                  <div className="ps-0 md:ps-3 font-bold secondary">22</div>
                 </div>
                 
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap rounded-md border   my-3">
                   <div className="text-red-500 font-bold">Absent</div>
-                  <div className="ps-3 font-bold secondary">22</div>
+                  <div className="ps-0 md:ps-3 font-bold secondary">22</div>
                 </div>
               </div>
           </div>
@@ -73,10 +73,10 @@ const Status = () => {
               <div className="text-5xl px-2 font-bold primary">
                   60
               </div>
-              <div className="w-full flex items-center justify-around">
+              <div className="w-full flex items-center justify-center">
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-green-500 font-bold">Route</div>
-                  <div className="ps-3 font-bold secondary">12</div>
+                  <div className="ps-0 md:ps-3 font-bold secondary">12</div>
                 </div>
                 <div className="w-[40%]"></div>
               </div>
