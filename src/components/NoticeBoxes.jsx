@@ -32,12 +32,7 @@ const NoticeBoxes = () => {
             buttonText: "View Alerts",
             bg: "#f4fff0" // Light green
         },
-        {
-            title: "User Messages",
-            description: "Read user messages and comments",
-            buttonText: "View Messages",
-            bg: "#fff0f0" // Light pink
-        }
+        
         // Add more objects as needed
     ];
     
