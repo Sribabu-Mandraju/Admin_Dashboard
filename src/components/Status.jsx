@@ -50,12 +50,12 @@ const Status = () => {
               <div className="w-full flex items-center justify-around">
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap  rounded-md border my-3">
                   <div className="text-green-600 font-bold">Present</div>
-                  <div className="ps-0 md:ps-3 font-bold secondary">22</div>
+                  <div className="ps-0 md:px-3 font-bold secondary">22</div>
                 </div>
                 
                 <div className="w-[40%] py-1 flex items-center justify-center flex-wrap rounded-md border   my-3">
-                  <div className="text-red-500 font-bold">Absent</div>
-                  <div className="ps-0 md:ps-4 font-bold secondary">22</div>
+                  <div className="text-red-500 text-[k10px] font-bold">Absent</div>
+                  <div className="ps-0 md:ps-3  font-bold secondary">22</div>
                 </div>
               </div>
           </div>
