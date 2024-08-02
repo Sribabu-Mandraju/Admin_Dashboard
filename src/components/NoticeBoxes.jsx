@@ -32,6 +32,24 @@ const NoticeBoxes = () => {
             buttonText: "View Alerts",
             bg: "#f4fff0" // Light green
         },
+        {
+            title: "System Alerts",
+            description: "Stay informed on system alerts",
+            buttonText: "View Alerts",
+            bg: "#f4fff0" // Light green
+        },
+        {
+            title: "System Alerts",
+            description: "Stay informed on system alerts",
+            buttonText: "View Alerts",
+            bg: "#f4fff0" // Light green
+        },
+        {
+            title: "System Alerts",
+            description: "Stay informed on system alerts",
+            buttonText: "View Alerts",
+            bg: "#f4fff0" // Light green
+        },
         
         // Add more objects as needed
     ];

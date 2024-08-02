@@ -9,6 +9,9 @@ const Dashboard = () => {
   const alertsData = [
     { message: 'Alert message 1' },
     { message: 'Alert message 2' },
+    { message: 'Alert message 3' },
+    { message: 'Alert message 1' },
+    { message: 'Alert message 2' },
     { message: 'Alert message 3' }
   ];
   

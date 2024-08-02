@@ -9,13 +9,13 @@ const App = () => {
   return (
     
       <>
-        <Home>
+        {/* <Home> */}
           <Routes>
             {/* <Route path="/" element={<Main  />} /> */}
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/main"  element={<Main />} />
+            {/* <Route path="/" element={<Dashboard />} /> */}
+            <Route path="/"  element={<Main />} />
           </Routes>
-        </Home>
+        {/* </Home> */}
       </>
     
   )
