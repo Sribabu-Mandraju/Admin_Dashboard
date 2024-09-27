@@ -34,7 +34,7 @@ const Main_GUI = () => {
   const currentTableData = currentTable !== null ? tables[currentTable] : null;
 
   return (
-    <div className="flex h-screen bg-black">
+    <div className="flex h-screen bg-gray-900 text-white">
       <Sidebar
         tables={tables}
         currentTable={currentTable}
@@ -43,14 +43,14 @@ const Main_GUI = () => {
       />
       <div className="flex-1 p-6">
         {isCreatingTable && (
-          <div className="bg-white p-6 rounded shadow-lg mb-6">
-            <h2 className="text-2xl font-bold mb-4">Create New Table</h2>
+          <div className="bg-gray-800 p-6 rounded shadow-lg mb-6">
+            <h2 className="text-2xl font-bold mb-4 text-green-400">Create New Table</h2>
             <input
               type="text"
               placeholder="Table Name"
               value={newTableName}
               onChange={(e) => setNewTableName(e.target.value)}
-              className="w-full border p-2 mb-4"
+              className="w-full border border-green-500 bg-gray-700 text-white p-2 mb-4 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
               required
             />
             <input
@@ -58,15 +58,15 @@ const Main_GUI = () => {
               placeholder="Column Names (comma separated)"
               value={newTableColumns}
               onChange={(e) => setNewTableColumns(e.target.value)}
-              className="w-full border p-2 mb-4"
+              className="w-full border border-green-500 bg-gray-700 text-white p-2 mb-4 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
               required
             />
-            <button onClick={createNewTable} className="bg-blue-600 text-white px-4 py-2 rounded">
+            <button onClick={createNewTable} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">
               Create Table
             </button>
             <button
               onClick={() => setIsCreatingTable(false)}
-              className="bg-gray-500 text-white px-4 py-2 rounded ml-2"
+              className="bg-gray-600 text-white px-4 py-2 rounded ml-2 hover:bg-gray-500 transition duration-200"
             >
               Cancel
             </button>

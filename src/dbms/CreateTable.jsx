@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 
-
 const CreateTableForm = ({ addTable }) => {
   const [tableName, setTableName] = useState('');
   const [numColumns, setNumColumns] = useState('');
@@ -11,7 +10,7 @@ const CreateTableForm = ({ addTable }) => {
   const handleSubmitTable = (e) => {
     e.preventDefault();
     setStep(2);
-    toast.success('This is a success message!');
+    toast.success('Proceeding to define columns!');
     setColumns(Array.from({ length: parseInt(numColumns) }, () => ({ name: '', type: '' })));
   };
 
@@ -20,7 +19,7 @@ const CreateTableForm = ({ addTable }) => {
     addTable(tableName, columns);
     setTableName('');
     setNumColumns('');
-    toast.success('This is a success message!');
+    toast.success('Table created successfully!');
     setStep(1);
   };
 
@@ -32,17 +31,17 @@ const CreateTableForm = ({ addTable }) => {
   };
 
   return (
-    <div className="bg-gray-800 p-6 rounded shadow-lg text-white">
+    <div className="bg-gray-900 p-6 rounded shadow-lg text-white">
       {step === 1 ? (
         <form onSubmit={handleSubmitTable}>
-          <h2 className="text-2xl font-bold mb-4 text-green-500">Create Table</h2>
+          <h2 className="text-2xl font-bold mb-4 text-green-400">Create Table</h2>
           <div className="mb-4">
             <label className="block mb-2 text-lg">Table Name</label>
             <input
               type="text"
               value={tableName}
               onChange={(e) => setTableName(e.target.value)}
-              className="w-full border border-green-500 p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-green-400 p-2 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
               required
             />
           </div>
@@ -52,7 +51,7 @@ const CreateTableForm = ({ addTable }) => {
               type="number"
               value={numColumns}
               onChange={(e) => setNumColumns(e.target.value)}
-              className="w-full border border-green-500 p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-green-400 p-2 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
               required
             />
           </div>
@@ -62,7 +61,7 @@ const CreateTableForm = ({ addTable }) => {
         </form>
       ) : (
         <form onSubmit={handleSubmitColumns}>
-          <h2 className="text-2xl font-bold mb-4 text-green-500">Define Columns</h2>
+          <h2 className="text-2xl font-bold mb-4 text-green-400">Define Columns</h2>
           {columns.map((column, index) => (
             <div key={index} className="mb-4">
               <label className="block mb-2 text-lg">Column {index + 1} Name</label>
@@ -70,14 +69,14 @@ const CreateTableForm = ({ addTable }) => {
                 type="text"
                 value={column.name}
                 onChange={(e) => handleColumnChange(index, 'name', e.target.value)}
-                className="w-full border border-green-500 p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full border border-green-400 p-2 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
               <label className="block mt-2 text-lg">Data Type</label>
               <select
                 value={column.type}
                 onChange={(e) => handleColumnChange(index, 'type', e.target.value)}
-                className="w-full border border-green-500 p-2 rounded bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full border border-green-400 p-2 rounded bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               >
                 <option value="">Select Data Type</option>
