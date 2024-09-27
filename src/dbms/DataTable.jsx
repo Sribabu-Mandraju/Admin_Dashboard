@@ -41,27 +41,66 @@ const DataTable = ({ table, onUpdateData }) => {
 
   // Function to handle downloading the table data as an Excel file
   const handleDownloadExcel = () => {
-    // Create a new workbook
     const wb = XLSX.utils.book_new();
-    // Create a worksheet from the table data
     const ws = XLSX.utils.json_to_sheet(table.data);
-    // Append the worksheet to the workbook
     XLSX.utils.book_append_sheet(wb, ws, table.tableName);
-    // Generate a download link and trigger the download
     XLSX.writeFile(wb, `${table.tableName}.xlsx`);
+  };
+
+  // Function to handle importing data from an Excel file
+  const handleImportExcel = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const data = event.target.result;
+      const workbook = XLSX.read(data, { type: 'binary' });
+
+      // Assume we're interested in the first sheet
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1 });
+
+      // Extract the header (first row) and data (rest of the rows)
+      const [header, ...rows] = worksheet;
+
+      // Create columns based on the headers
+      const newColumns = header.map((name) => ({ name, type: 'text' }));
+
+      // Map the rows to match the header
+      const newData = rows.map((row) =>
+        newColumns.reduce((acc, col, index) => {
+          acc[col.name] = row[index] || '';
+          return acc;
+        }, {})
+      );
+
+      // Update the table with the new columns and data
+      onUpdateData(table.tableName, newData, newColumns);
+    };
+
+    reader.readAsBinaryString(file);
   };
 
   return (
     <div className="bg-gray-900 text-gray-200 p-6 rounded shadow-lg">
       <h2 className="text-2xl font-bold mb-4">{table.tableName}</h2>
-      <button
-        onClick={handleDownloadExcel}
-        className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
-      >
-        Download Excel
-      </button>
+      <div className="mb-4">
+        <button
+          onClick={handleDownloadExcel}
+          className="bg-blue-500 text-white px-4 py-2 rounded mr-4"
+        >
+          Download Excel
+        </button>
+        <input
+          type="file"
+          accept=".xlsx, .xls"
+          onChange={handleImportExcel}
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+        />
+      </div>
       <form onSubmit={handleSubmit} className="bg-gray-800 p-6 rounded mb-6 shadow-md">
-        <h3 className="text-xl font-bold mb-4">Add Data</h3>
+        <h3 className="text-xl font-bold mb-4">{isEdit ? 'Edit Data' : 'Add Data'}</h3>
         {table.columns.map((column, index) => (
           <div key={index} className="mb-4">
             <label className="block text-lg">{column.name}</label>
